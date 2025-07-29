@@ -1,6 +1,16 @@
 import React from 'react'
 
 const Hero = () => {
+
+    const scrollToSection = (sectionId) => {
+        setTimeout(() => {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
+    };
+
     return (
         <div id="hero">
             <div className="relative h-screen">
@@ -17,7 +27,10 @@ const Hero = () => {
                         <div className="flex flex-wrap justify-center gap-4">
                             <a href="/#joinsection" className="rounded-lg px-6 py-3 font-medium bg-orange-400 text-slate-900 hover:bg-orange-300">
                                 Get Started</a>
-                            <button className="rounded-lg border px-6 py-3 font-medium border-slate-700 bg-slate-800 text-white hover:bg-slate-700">
+                            <button 
+                                onClick={() => scrollToSection('features')}
+                                className="rounded-lg border px-6 py-3 font-medium border-slate-700 bg-slate-800 text-white hover:bg-slate-700 transition-colors duration-200"
+                            >
                                 Learn More
                             </button>
                         </div>
