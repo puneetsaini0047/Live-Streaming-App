@@ -60,7 +60,7 @@ const Footer = () => {
         
         <div className="mt-10 py-10 border-t border-gray-700 flex items-center justify-between sm:flex-row flex-col">
             <p className="text-gray-300">
-                © 2025 StreamLive. All rights reserved.
+                © 2025 StreamLive. All rights reserved. Made By Puneet Saini.
             </p>
             <div className="flex items-center gap-x-6 text-gray-400 mt-6 sm:mt-0">
                 
